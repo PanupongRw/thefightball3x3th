@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fightball 3x3 Vol. 3 the Central region</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1>Fightball 3x3 Vol. 3 the Central region</h1>
+        </header>
+        <main>
+            <div class="table-container">
+                <table id="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Game</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Teams</th>
+                            <th>Venue</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+            <button class="primary-btn" onclick="showPasswordPrompt()">Edit Schedule</button>
+        </main>
+    </div>
+
+    <div id="password-modal" class="modal">
+        <div class="modal-content">
+            <h2>Enter Password</h2>
+            <input type="password" id="password-input" placeholder="Password">
+            <div class="modal-actions">
+                <button class="primary-btn" onclick="checkPassword()">Submit</button>
+                <button class="secondary-btn" onclick="closePasswordModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="edit-schedule-modal" class="modal">
+        <div class="modal-content">
+            <h2>Edit Schedule</h2>
+            <div class="table-container">
+                <table id="edit-schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Game</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Teams</th>
+                            <th>Venue</th>
+                            <th>Result</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-actions">
+                <button class="primary-btn" onclick="addNewGame()">Add New Game</button>
+                <button class="primary-btn" onclick="saveSchedule()">Save Schedule</button>
+                <button class="secondary-btn" onclick="closeEditSchedule()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
